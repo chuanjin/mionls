@@ -1,1 +1,1 @@
-sudo pacman -S zsh fzf ripgrep bat eza zoxide plocate btop apache2-utils fd-find
+sudo pacman -S --noconfirm zsh fzf ripgrep bat eza zoxide btop fd
