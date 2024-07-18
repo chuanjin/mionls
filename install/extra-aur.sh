@@ -1,1 +1,1 @@
-echo y | yay -S --answerclean All --answerdiff None lazydocker
+echo y | yay -S --cleanmenu=false --diffmenu=false --editmenu=false --noremovemake lazydocker
