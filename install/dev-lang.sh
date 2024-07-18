@@ -1,4 +1,6 @@
 curl https://mise.run | sh
+mise activate
+echo 'eval "$(~/.local/bin/mise activate bash)"' >>~/.bashrc
 
 AVAILABLE_LANGUAGES=("Ruby on Rails" "Node.js" "Go" "Python" "Elixir" "Rust" "Java")
 languages=$(gum choose "${AVAILABLE_LANGUAGES[@]}" --no-limit --height 10 --header "Select programming languages")
