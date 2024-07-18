@@ -113,14 +113,9 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-[[ -s /home/cj/.autojump/etc/profile.d/autojump.sh ]] && source /home/cj/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
-
-
 export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/.config/rofi/bin:$PATH
 
-alias cat=ccat
+alias cat=bat
 alias v=/home/cj/bin/nvim.appimage
 alias vim=/home/cj/bin/nvim.appimage
 
