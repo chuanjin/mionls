@@ -9,12 +9,12 @@ ascii_art='
       \/               \/          \/
 '
 
-project="mionls"
+export project="mionls"
 echo -e "$ascii_art"
 echo "=> Minls is for fresh Manjaro I3 OhMyZsh Neovim Lazyvim starter installations!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
-sudo pacman -Syu --noconfirm >/dev/null
+sudo pacman -Syu
 sudo pacman -S --noconfirm git >/dev/null
 
 echo "Cloning stable ..."

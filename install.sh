@@ -5,4 +5,4 @@ set -e
 sudo pacman -S --noconfirm curl unzip
 
 # Run terminal installers
-for installer in ~/.local/share/mionls/install/*.sh; do source $installer; done
+for installer in ~/.local/share/${project}/install/*.sh; do source $installer; done
