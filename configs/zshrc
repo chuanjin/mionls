@@ -106,7 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -116,8 +117,8 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/.config/rofi/bin:$PATH
 
 alias cat=bat
-alias v=/home/cj/bin/nvim.appimage
-alias vim=/home/cj/bin/nvim.appimage
+alias v=/home/$USER/bin/nvim.appimage
+alias vim=/home/$USER/bin/nvim.appimage
 
 # amixer sset Master unmute > /dev/null 2>&1
 
@@ -138,4 +139,4 @@ setxkbmap se
 setxkbmap -option caps:escape
 
 eval "$(zoxide init zsh)"
-eval "$(/home/cj/.local/bin/mise activate zsh)"
+eval "$(/home/$USER/.local/bin/mise activate zsh)"
