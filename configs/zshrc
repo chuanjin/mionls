@@ -117,8 +117,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/.config/rofi/bin:$PATH
 
 alias cat=bat
-alias v=/home/$USER/bin/nvim.appimage
-alias vim=/home/$USER/bin/nvim.appimage
+alias v=/home/$USER/.local/bin/nvim.appimage
+alias vim=/home/$USER/.local/bin/nvim.appimage
 
 # amixer sset Master unmute > /dev/null 2>&1
 

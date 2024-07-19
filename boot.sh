@@ -11,7 +11,7 @@ ascii_art='
 
 export project="mionls"
 echo -e "$ascii_art"
-echo "=> Minls is for fresh Manjaro I3 OhMyZsh Neovim Lazyvim starter installations!"
+echo "=> Mionls is for fresh Manjaro I3 OhMyZsh Neovim Lazyvim starter installations!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
 sudo pacman -Syu
