@@ -1,6 +1,6 @@
 curl https://mise.run | sh
 mise activate
-echo 'eval "$(~/.local/bin/mise activate bash)"' >>~/.bashrc
+echo "eval $(~/.local/bin/mise activate bash)" >>~/.bashrc
 
 # Install default programming languages
 if [[ -v FIRST_RUN_LANGUAGES ]]; then
