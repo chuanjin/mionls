@@ -4,7 +4,7 @@ set -e
 # Needed for all installers
 sudo pacman -S --noconfirm curl unzip gum
 
-AVAILABLE_LANGUAGES=("Ruby on Rails" "Node.js" "Go" "PHP" "Python" "Elixir" "Rust" "Java")
+AVAILABLE_LANGUAGES=("Ruby on Rails" "Node.js" "Go" "Python" "Elixir" "Rust" "Java")
 SELECTED_LANGUAGES="Go","Node.js","Python"
 export FIRST_RUN_LANGUAGES=$(gum choose "${AVAILABLE_LANGUAGES[@]}" --no-limit --selected "$SELECTED_LANGUAGES" --height 10 --header "Select programming languages")
 
