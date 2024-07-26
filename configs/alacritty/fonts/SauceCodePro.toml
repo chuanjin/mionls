@@ -1,0 +1,4 @@
+[font]
+normal = { family = "SauceCodePro Nerd Font Mono", style = "Regular" }
+bold = { family = "SauceCodePro Nerd Font Mono", style = "Bold" }
+italic = { family = "SauceCodePro Nerd Font Mono", style = "Italic" }

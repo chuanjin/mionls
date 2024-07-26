@@ -5,10 +5,10 @@ TERM = "xterm-256color"
 program = "zellij"
 
 [window]
-padding.x = 16
-padding.y = 14
+padding.x = 10
+padding.y = 8
 decorations = "None"
-opacity = 0.98
+opacity = 0.95
 
 [keyboard]
 bindings = [
