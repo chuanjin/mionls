@@ -127,3 +127,5 @@ setxkbmap -option caps:escape
 
 eval "$(zoxide init zsh)"
 eval "$(/home/$USER/.local/bin/mise activate zsh)"
+
+eval "$(oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/emodipt-extend.omp.json)"
