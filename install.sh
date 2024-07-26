@@ -14,3 +14,12 @@ export FIRST_RUN_DBS=$(gum choose "${AVAILABLE_DBS[@]}" --no-limit --selected "$
 
 # Run terminal installers
 for installer in ~/.local/share/${project}/install/*.sh; do source $installer; done
+
+read -rp "Do you want to reboot your system now? (y/n): " choice
+
+if [[ "$choice" =~ ^[Yy]$ ]]; then
+	echo "Rebooting now..."
+	sudo reboot
+else
+	echo "Reboot canceled. You need to manually reboot later."
+fi
