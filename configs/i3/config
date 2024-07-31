@@ -62,7 +62,8 @@ bindsym $mod+F2 exec gsimplecal
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F4 exec /usr/sbin/zsh -c 'source ~/.zshrc && alacritty -e ranger'
 # bindsym $alt+space exec "rofi -modi drun,window,run -show drun -sidebar-mode -width 70 -padding 50 -show-icons -drun-icon-theme 'Papirus' -font 'Source Code Pro 18'"
-bindsym $alt+space exec $HOME/.config/rofi/bin/launcher_ribbon
+# bindsym $alt+space exec $HOME/.config/rofi/scripts/launcher_t7
+bindsym $alt+space exec $HOME/.config/rofi/launcher
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+F8 exec arandr
 bindsym $mod+F9 exec google-chrome-stable

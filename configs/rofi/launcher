@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+dir="$HOME/.config/rofi"
+styles=($(ls -p --hide="colors.rasi" $dir))
+color="${styles[$(($RANDOM % 8))]}"
+
+rofi -no-lazy-grab -show drun -modi drun -theme $dir/theme.rasi
