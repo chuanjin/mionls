@@ -427,3 +427,7 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+
+# Start xbindkeys
+exec --no-startup-id xbindkeys
