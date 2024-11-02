@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
 
-# Terminate already running bar instances
+# Terminate already running Polybar instances
 killall -q polybar
 
 # Wait until the processes have been shut down
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+while pgrep -x polybar >/dev/null; do sleep 1; done
 
-if type "xrandr"; then
-  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar --reload -c $HOME/.config/polybar/config.ini topbar &
-  done
+# Fetch the primary monitor using xrandr
+PRIMARY_MONITOR=$(xrandr --query | grep " primary" | awk '{print $1}')
+
+# Launch Polybar on the primary monitor
+if [ -n "$PRIMARY_MONITOR" ]; then
+  MONITOR=$PRIMARY_MONITOR polybar --reload topbar &
+  echo "Polybar launched on primary monitor: $PRIMARY_MONITOR"
 else
-  polybar --reload -c $HOME/.config/polybar/config.ini topbar &
+  echo "No primary monitor found. Polybar not launched."
 fi

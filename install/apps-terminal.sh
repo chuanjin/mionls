@@ -6,3 +6,6 @@ sudo pacman -S pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer
 
 sudo pacman -S xbindkeys
 sudo pacman -S xorg-xev
+
+yay -S ttf-font-awesome
+fc-cache -fv
