@@ -10,12 +10,18 @@ else
   dpi=132
 fi
 
+# Check if the current DPI is different
+if grep -q "^Xft.dpi: $dpi$" ~/.Xresources; then
+  # DPI is already set correctly; exit without making changes
+  exit 0
+fi
+
 # Update or add the Xft.dpi line in .Xresources
 if grep -q "Xft.dpi" ~/.Xresources; then
-  # If Xft.dpi exists, replace it
+  # Replace the existing Xft.dpi line
   sed -i "s/^Xft.dpi:.*/Xft.dpi: $dpi/" ~/.Xresources
 else
-  # If Xft.dpi does not exist, add it
+  # Add the Xft.dpi line if it doesn't exist
   echo "Xft.dpi: $dpi" >>~/.Xresources
 fi
 
