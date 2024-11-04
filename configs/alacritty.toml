@@ -1,1 +1,1 @@
-import = [ "~/.config/alacritty/theme.toml", "~/.config/alacritty/font.toml", "~/.config/alacritty/font-size.toml", "~/.local/share/{project}/defaults/alacritty.toml" ]
+import = [ "~/.config/alacritty/theme.toml", "~/.config/alacritty/font.toml", "~/.config/alacritty/font-size.toml", "~/.local/share/mionls/defaults/alacritty.toml" ]
