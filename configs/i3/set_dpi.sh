@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Define the path for the flag file
+FLAG_FILE="/tmp/dpi_update_flag"
+
+# Exit if the flag file exists (to prevent a loop)
+if [ -f "$FLAG_FILE" ]; then
+  # Remove the flag file and exit to avoid repeated runs
+  rm "$FLAG_FILE"
+  exit 0
+fi
+
 # Count the number of connected monitors
 monitor_count=$(xrandr --query | grep " connected" | wc -l)
 
@@ -27,3 +37,9 @@ fi
 
 # Apply the updated DPI setting
 xrdb -merge ~/.Xresources
+
+# Create the flag file
+touch "$FLAG_FILE"
+
+# Restart i3 to refresh the bar and other UI elements
+i3-msg restart
