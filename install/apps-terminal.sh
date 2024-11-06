@@ -8,4 +8,5 @@ sudo pacman -S xbindkeys
 sudo pacman -S xorg-xev
 
 yay -S ttf-font-awesome
+sudo pacman -S noto-fonts-emoji
 fc-cache -fv
