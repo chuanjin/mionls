@@ -6,6 +6,7 @@ mv nvim.appimage /home/$USER/.local/bin
 if [ ! -d "$HOME/.config/nvim" ]; then
   # Use LazyVim
   git clone https://github.com/LazyVim/starter ~/.config/nvim
+  rm -rf ~/.config/nvim/.git
 
   # Disable update notification popup in starter config
   sed -i 's/checker = { enabled = true }/checker = { enabled = true, notify = false }/g' ~/.config/nvim/lua/config/lazy.lua
