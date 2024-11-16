@@ -122,9 +122,6 @@ alias lta='lt -a'
 export PATH=$(echo "$PATH" | awk -v RS=: -v ORS=: '!seen[$0]++')
 # Remove duplicated PATH
 
-setxkbmap se
-setxkbmap -option caps:escape
-
 eval "$(zoxide init zsh)"
 eval "$(/home/$USER/.local/bin/mise activate zsh)"
 
