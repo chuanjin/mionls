@@ -3,6 +3,7 @@ set -e
 export project="mionls"
 
 sudo pacman -Syu
+sudo yay
 
 cd ~/.local/share/${project}
 git stash && git pull origin main
@@ -14,3 +15,5 @@ export FIRST_RUN_LANGUAGES=$(gum choose "${AVAILABLE_LANGUAGES[@]}" --no-limit -
 for installer in ~/.local/share/${project}/install/*.sh; do source $installer; done
 
 echo "Update Completed!"
+
+cd -
