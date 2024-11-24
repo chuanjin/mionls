@@ -65,8 +65,11 @@ bindsym $mod+F4 exec /usr/sbin/zsh -c 'source ~/.zshrc && alacritty -e ranger'
 # bindsym $alt+space exec $HOME/.config/rofi/scripts/launcher_t7
 bindsym $alt+space exec $HOME/.config/rofi/launcher
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+F8 exec arandr
-bindsym $mod+F9 exec google-chrome-stable
+bindsym $mod+F7 exec arandr
+bindsym $mod+F9 exec --no-startup-id i3-scrot -w
+bindsym $mod+F10 exec flameshot
+bindsym $mod+F11 exec --no-startup-id blurlock
+bindsym $mod+F12 exec google-chrome-stable
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
