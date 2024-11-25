@@ -1,4 +1,5 @@
-wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+
 chmod +x nvim.appimage
 mv nvim.appimage /home/$USER/.local/bin
 
