@@ -57,28 +57,32 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec gsimplecal
-bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F4 exec /usr/sbin/zsh -c 'source ~/.zshrc && alacritty -e ranger'
-# bindsym $alt+space exec "rofi -modi drun,window,run -show drun -sidebar-mode -width 70 -padding 50 -show-icons -drun-icon-theme 'Papirus' -font 'Source Code Pro 18'"
-# bindsym $alt+space exec $HOME/.config/rofi/scripts/launcher_t7
-bindsym $alt+space exec $HOME/.config/rofi/launcher
-bindsym $mod+F5 exec terminal -e 'mocp'
+bindsym $mod+F1 exec amixer -q set Master 0
+bindsym $mod+F2 exec amixer -q set Master 5%-
+bindsym $mod+F3 exec amixer -q set Master 5%+
+bindsym $mod+F4 exec amixer set Capture toggle
+bindsym $mod+F5 exec brightnessctl set 10%-
+bindsym $mod+F6 exec brightnessctl set +10%
 bindsym $mod+F7 exec arandr
 bindsym $mod+F9 exec --no-startup-id i3-scrot -w
 bindsym $mod+F10 exec flameshot
 bindsym $mod+F11 exec --no-startup-id blurlock
 bindsym $mod+F12 exec google-chrome-stable
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+bindsym $mod+Shift+F2 exec gsimplecal
+bindsym $mod+Shift+F3 exec pcmanfm
+bindsym $mod+Shift+F4 exec /usr/sbin/zsh -c 'source ~/.zshrc && alacritty -e ranger'
+bindsym $mod+Shift+F5 exec terminal -e 'mocp'
+bindsym $mod+Shift+F9 --release exec --no-startup-id i3-scrot -s
+bindsym $alt+space exec $HOME/.config/rofi/launcher
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+Ctrl+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+bindsym $mod+Ctrl+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
+bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+# bindsym $alt+space exec "rofi -modi drun,window,run -show drun -sidebar-mode -width 70 -padding 50 -show-icons -drun-icon-theme 'Papirus' -font 'Source Code Pro 18'"
+# bindsym $alt+space exec $HOME/.config/rofi/scripts/launcher_t7
+bindsym $mod+Ctrl+F3 exec pcmanfm_pkexec
 
 # focus_follows_mouse no
 
