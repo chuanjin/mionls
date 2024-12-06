@@ -1,4 +1,4 @@
-sudo pacman -S --quiet --needed base-devel yay fish zsh fzf ripgrep bat eza zoxide btop fd gum fastfetch lazygit git-delta gsimplecal rofi ranger polybar
+sudo pacman -S --quiet --needed base-devel yay fish zsh fzf ripgrep bat eza zoxide btop fd gum fastfetch lazygit git-delta gsimplecal rofi ranger polybar jq
 
 pip3 install tldr ipython
 
